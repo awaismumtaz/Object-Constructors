@@ -2,13 +2,14 @@ namespace ObjectConstructor;
 
 public class Money
 {
-    public Decimal Amount { get; set; }
-    public Currency Currency { get; set; }
+    public Decimal Amount { get; private set; }
+    public Currency CurrencyType { get; private set; }
 
-    public Money(Decimal amount, Currency currency)
+    public Money(decimal amount, Currency currencyType)
     {
-        this.Amount = amount;
-        this.Currency = currency;
+        Amount = amount;
+        CurrencyType = currencyType;
     }
+    
     
 }

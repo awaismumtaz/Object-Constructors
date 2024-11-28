@@ -2,44 +2,29 @@ namespace ObjectConstructor;
 
 public class CurrencyConverter
 {
-    public Decimal Dollar { get; set; }
-    public Decimal Euro { get; set; }
-    public Decimal SEK { get; set; }
+    public decimal Dollar { get; }
+    public decimal Euro { get; }
+    public decimal SEK { get; }
 
-    public CurrencyConverter(Decimal dollar, Decimal euro, Decimal sek)
+    public CurrencyConverter(decimal dollar, decimal euro, decimal sek)
     {
-        this.Dollar = dollar;
-        this.Euro = euro;
-        this.SEK = sek;
-    }
-	
-    public Decimal DollarToEuro()
-    {
-        return this.Dollar * this.Euro ;
+        Dollar = dollar;
+        Euro = euro;
+        SEK = sek;
     }
 
-    public Decimal DollarToSek()
+    public decimal DollarToSEK(decimal amount)
     {
-        return this.Dollar * this.SEK;
+        return amount * Dollar;
     }
 
-    public Decimal EuroToDollar()
+    public decimal EuroToDollar(decimal amount)
     {
-        return this.Euro * this.Dollar;
+        return amount * Euro;
     }
 
-    public Decimal EuroToSek()
+    public decimal SEKToDollar(decimal amount)
     {
-        return this.Euro * this.SEK;
-    }
-
-    public Decimal SekToEuro()
-    {
-        return this.SEK * this.Euro;
-    }
-
-    public Decimal SekToDollar()
-    {
-        return this.SEK * this.Dollar;
+        return amount * Dollar;
     }
 }
