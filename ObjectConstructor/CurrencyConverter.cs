@@ -20,7 +20,7 @@ public class CurrencyConverter
 
     public decimal EuroToDollar(decimal amount)
     {
-        return amount / Dollar * Euro;
+        return amount / Euro * Dollar;
     }
 
     public decimal SekToDollar(decimal amount)
@@ -40,6 +40,6 @@ public class CurrencyConverter
     
     public decimal EuroToSek(decimal amount)
     {
-        return amount / SEK * Euro ;
+        return amount / Euro * SEK ;
     }
 }
