@@ -13,18 +13,33 @@ public class CurrencyConverter
         SEK = sek;
     }
 
-    public decimal DollarToSEK(decimal amount)
+    public decimal DollarToSek(decimal amount)
     {
-        return amount * Dollar;
+        return amount / Dollar;
     }
 
     public decimal EuroToDollar(decimal amount)
     {
-        return amount * Euro;
+        return amount / Dollar * Euro;
     }
 
-    public decimal SEKToDollar(decimal amount)
+    public decimal SekToDollar(decimal amount)
     {
         return amount * Dollar;
+    }
+    
+    public decimal DollarToEuro(decimal amount)
+    {
+        return amount / Dollar * Euro;
+    }
+    
+    public decimal SekToEuro(decimal amount)
+    {
+        return amount / SEK * Euro;
+    }
+    
+    public decimal EuroToSek(decimal amount)
+    {
+        return amount / SEK * Euro ;
     }
 }
